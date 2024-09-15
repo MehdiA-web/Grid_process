@@ -1,4 +1,4 @@
-# Project_C Process Overview
+# Grid Process Overview
 
 This document provides an overview of the workflow designed in **ProcessMaker** for **Project_C**. The process consists of multiple tasks, with forms and grids for data input and review.
 
