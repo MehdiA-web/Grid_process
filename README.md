@@ -8,7 +8,7 @@ The following diagram represents the overall structure of the workflow, includin
 
 ### Workflow Diagram
 
-![Workflow Diagram](https://s8.uupload.ir/files/screenshot_(11)_i83g.png)
+![Workflow Diagram](https://s8.uupload.ir/files/screenshot_(11)_1hur.png)
 
 *Figure 1: Workflow overview showing the steps from the first grid to the second grid.*
 
@@ -34,7 +34,7 @@ The first task in the workflow requires the user to input data into a grid. This
 - **Calculate Sum**: Calculate the sum of scores.
 - **Submit and Continue**: Save the current data and proceed to the next step.
 
-![First Task Form](https://s8.uupload.ir/files/screenshot_(12)_8ar.png)
+![First Task Form](https://s8.uupload.ir/files/screenshot_(12)_0qjt.png)
 
 *Figure 2: Data entry form for Task 1 with fields for names, addresses, scores, and rates.*
 
@@ -59,7 +59,7 @@ The second task expands on the data entry process, organizing information into t
 - **Complete Calculations**: Calculate sums for all entries.
 - **Save**: Submit the form and save changes.
 
-![Second Task Tab 1](https://s8.uupload.ir/files/screenshot_(13)_bvxx.png)
+![Second Task Tab 1](https://s8.uupload.ir/files/screenshot_(13)_porh.png)
 
 *Figure 3: Data entry form for Task 2, displaying Tab 1 with various fields and calculated scores.*
 
@@ -76,7 +76,7 @@ In **Tab 2**, users can review a summary of all previous processes completed by 
 - **Score/Rate**: A summary of scores and ratings from earlier processes.
 - **Comments/Notes**: Any additional notes or comments related to the processes.
 
-![Process Summary Tab 2](https://s8.uupload.ir/files/screenshot_(14)_4wh.png)
+![Process Summary Tab 2](https://s8.uupload.ir/files/screenshot_(14)_yyzk.png)
 
 *Figure 4: Data table in Tab 2 showing a summary of all previous processes.*
 
@@ -98,7 +98,7 @@ This process guides users through multiple tasks, allowing for organized data en
 To use these screenshots in your README, ensure they are placed in the correct path as indicated. Replace the `path_to_images/` with the actual folder where the images are stored.
 
 ```markdown
-![Workflow Diagram](path_to_images/screenshot_1.png)
-![First Task Form](path_to_images/screenshot_2.png)
-![Second Task Tab 1](path_to_images/screenshot_3.png)
-![Process Summary Tab 2](path_to_images/screenshot_4.png)
+![Workflow Diagram](https://s8.uupload.ir/files/screenshot_(11)_1hur.png)
+![First Task Form](https://s8.uupload.ir/files/screenshot_(12)_0qjt.png)
+![Second Task Tab 1](https://s8.uupload.ir/files/screenshot_(13)_porh.png)
+![Process Summary Tab 2](https://s8.uupload.ir/files/screenshot_(14)_yyzk.png)
