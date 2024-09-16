@@ -1,32 +1,48 @@
-// Get the JSON data from the hidden field
-const data = $('#hid_json').getValue();
-
-let jsonParse;
-try {
-    // Attempt to parse the JSON data
-    jsonParse = JSON.parse(data);
-} catch (e) {
-    console.error("Invalid JSON format", e);
-}
 
 $(document).ready(function () {
-    // Initialize DataTable
-    const table = $('#example').DataTable();
-    console.log(table);
+    // Retrieve the JSON data from the hidden field in ProcessMaker
+    const data = $('#hid_json').getValue();  // ProcessMaker hidden field value
 
-    // Check if JSON parsing was successful
+    console.log("Raw data:", data);  // Debug the raw data from the hidden field
+
+    let jsonParse;
+    try {
+        jsonParse = JSON.parse(data);  // Parse the JSON string
+        console.log("Parsed JSON:", jsonParse);  // Debug the parsed JSON
+    } catch (e) {
+        console.error("Invalid JSON format", e);  // Log an error if JSON parsing fails
+    }
+
+    // Initialize the Kendo Grid if JSON data is successfully parsed
     if (jsonParse) {
-        // Add each item from JSON to the DataTable
-        jsonParse.forEach(item => {
-            table.row.add([
-                item.TXT_NAME,
-                item.TXT_DOC,
-                item.TXT_RATE,
-                item.TXT_SCORE,
-                item.TXT_SUM
-            ]).draw(false);
+        $("#grid").kendoGrid({
+            dataSource: {
+                data: jsonParse,  // Use the parsed JSON data
+                schema: {
+                    model: {
+                        fields: {
+                            TXT_NAME: { type: "string" },
+                            TXT_DOC: { type: "string" },
+                            TXT_RATE: { type: "number" },
+                            TXT_SCORE: { type: "number" },
+                            TXT_SUM: { type: "number" }
+                        }
+                    }
+                },
+                pageSize: 5
+            },
+            height: 400,
+            scrollable: true,
+            pageable: true,
+            columns: [
+                { field: "TXT_NAME", title: "Name" },
+                { field: "TXT_DOC", title: "Document" },
+                { field: "TXT_RATE", title: "Rate" },
+                { field: "TXT_SCORE", title: "Score" },
+                { field: "TXT_SUM", title: "Sum" }
+            ]
         });
     } else {
-        console.error("No valid data to display in the table");
+        console.error("No valid data to display in the grid.");
     }
 });

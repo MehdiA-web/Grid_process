@@ -52,14 +52,13 @@ $('#btn_submit button').on('click', function () {
 
 }).addClass('btn-danger'); // Add 'btn-danger' class to indicate a destructive or important action
 
-// Bind click event for the check button (same action as submit in this case)
 $('#btn_check button').on('click', function () {
 
     // Save and submit the form
     $('form').saveForm();
     $('form').submitForm();
 
-}).addClass('btn-danger'); // Also mark this as 'btn-danger' since it's critical
+}).addClass('btn-danger');
 
 // Bind click event for tab_1
 $('#tab_1').click(function () {
